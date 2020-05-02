@@ -29,9 +29,9 @@ export const GlobalStyle = createGlobalStyle`
   body {
     line-height: 1;
   }
-  html, body{
+  /* html, body{
     background: #f2f3f4;;
-  }
+  } */
   ol, ul {
     list-style: none;
   }
