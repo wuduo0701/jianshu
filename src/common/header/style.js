@@ -115,6 +115,7 @@ export const SearchInfoTitle = styled.div`
 export const SearchInfoSwitch = styled.div`
   float: right;
   font-style: 13px;
+  cursor: pointer;
   .spin {
     display: block;
     float: left;

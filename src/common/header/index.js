@@ -40,7 +40,7 @@ class Header extends Component {
     }
   }
   render() {
-    const { focused, handleInputFocus, handleInputBlur} = this.props;
+    const { focused, handleInputFocus, handleInputBlur, list} = this.props;
     return (
       <Top>
         <Logo/>
@@ -55,7 +55,7 @@ class Header extends Component {
             >
               <MenuSearch
                 className={focused ? 'focused' : ''}
-                onFocus={handleInputFocus}
+                onFocus={() => handleInputFocus(list)}
                 onBlur={handleInputBlur}
               />
             </CSSTransition>
@@ -94,8 +94,10 @@ const mapStateToprops = (state) => {
 // 映射dispatch方法到props上
 const mapDispatchToProps = (dispatch) => {
   return {
-    handleInputFocus() {
-      dispatch(actionCreators.getInfo())
+    handleInputFocus(list) {
+      if(list.size === 0) {
+        dispatch(actionCreators.getInfo());
+      }
       dispatch(actionCreators.searchFocus());
     },
     handleInputBlur() {
