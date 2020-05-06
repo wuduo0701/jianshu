@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 import { actionCreators } from './store'
 import { Top, Logo, Menu, MenuItem, MenuSearch, SearchWrapper, SearchInfo, SearchInfoTitle, SearchInfoSwitch, SearchInfoItem, Addition, Button } from './style';
@@ -43,7 +44,9 @@ class Header extends Component {
     const { focused, handleInputFocus, handleInputBlur, list} = this.props;
     return (
       <Top>
-        <Logo/>
+        <Link to='/'>
+          <Logo/>
+        </Link>
         <Menu>
           <MenuItem className="left active">首页</MenuItem>
           <MenuItem className="left">下载App</MenuItem>

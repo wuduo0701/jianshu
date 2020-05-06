@@ -3,7 +3,8 @@ import * as actionsTypes from './actionTypes';
 const defaultState = fromJS({
   articleList:[],
   recommendList: [],
-  acticlePage: 1
+  acticlePage: 1,
+  isTop: false
 })
 
 export default(state = defaultState, action) => {
@@ -18,6 +19,8 @@ export default(state = defaultState, action) => {
         articleList: state.get('articleList').concat(action.list),
         acticlePage: action.nextPage
       })
+    case actionsTypes.IS_TOP_SHOW:
+      return state.set('isTop', action.show)
     default:
       return state;
   }

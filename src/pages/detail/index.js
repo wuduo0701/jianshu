@@ -1,8 +1,20 @@
 import React from 'react';
+import { connect } from 'react-redux'
+import { DetailWrapper, Title, Content } from './style';
 
-function Detail() {
+function Detail(props) {
   return (
-    <div>Detail</div>
+    <DetailWrapper>
+      <Title>
+        {props.title}
+      </Title>
+      <Content dangerouslySetInnerHTML={{__html: props.content}}>
+      </Content>
+    </DetailWrapper>
   )
 }
-export default Detail;
+const mapState = (state) => ({
+  title: state.getIn(['detail', 'title']),
+  content: state.getIn(['detail', 'content']),
+})
+export default connect(mapState, null)(Detail);

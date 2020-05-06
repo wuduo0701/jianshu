@@ -72,6 +72,7 @@ export const WriterWrapper = styled.div`
   text-align: center;
 `
 
+// 阅读更多部分
 export const LoadMore = styled.div`
   width: 100%;
   height: 40px;
@@ -83,4 +84,18 @@ export const LoadMore = styled.div`
   color: #fff;
   font-size: 15px;
   cursor: pointer;
+`
+
+//  回到顶部部分
+
+export const BackTop = styled.div`
+  position: fixed;
+  right: 100px;
+  bottom: 100px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  border: 1px solid #ccc;
+  font-size: 14px;
 `

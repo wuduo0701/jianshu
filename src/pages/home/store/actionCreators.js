@@ -33,3 +33,8 @@ export const getMoreInfo = (page) => {
     })
   }
 }
+
+export const TopShow = (show) => ({
+  type: actionsTypes.IS_TOP_SHOW,
+  show
+})
