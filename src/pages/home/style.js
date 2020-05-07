@@ -64,13 +64,75 @@ export const RecommendItem = styled.div`
 //  作者榜部分
 
 export const WriterWrapper = styled.div`
-  width: 278px;
-  border: 1px solid #dcdcdc;
-  border-radius: 3px;
+  width: 280px;
+  margin: 0 0 20px;
+  text-align: left;
+  list-style: none;
   height: 300px;
   line-height: 300px;
   text-align: center;
 `
+
+export const WriterUl = styled.ul`
+  padding-left: 0;
+  margin: 0 0 20px;
+  text-align: left;
+  list-style: none;
+`
+
+export const WriterItem = styled.li`
+  margin-top: 15px;
+  line-height: 20px;
+  height: 48px;
+  .avator {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .content {
+    margin-top: 2px;
+    font-size: 12px;
+    color: #969696;
+    position: relative;
+    top: -45px;
+    left: 60px
+  }
+`
+export const WriterName = styled.div`
+  font-size: 14px;
+  position: relative;
+  top: -45px;
+  left: 60px;
+  cursor: pointer;
+`
+//  关注
+export const Follow = styled.div`
+  float: right;
+  position: relative;
+  top: -90px;
+  margin-top: 5px;
+  padding: 0;
+  font-size: 13px;
+  color: #42c02e;
+  cursor: pointer;
+`
+//  查看全部
+export const FindAll = styled.div`
+  width: 278px;
+  height: 35px;
+  line-height: 40px;
+  margin: 30px 0;
+  background-color: #f7f7f7;
+  text-align: center;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #787878;
+  cursor: pointer;
+`
+
 
 // 阅读更多部分
 export const LoadMore = styled.div`

@@ -49,7 +49,9 @@ class Header extends Component {
           <Logo/>
         </Link>
         <Menu>
-          <MenuItem className="left active">首页</MenuItem>
+          <Link to='/'>
+            <MenuItem className="left active">首页</MenuItem>
+          </Link>
           <MenuItem className="left">下载App</MenuItem>
           <SearchWrapper>
             <CSSTransition
