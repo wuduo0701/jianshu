@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
-import { actionCreators } from './store'
+import { actionCreators } from './store';
+import { actionCreators as loginactionCreators } from '../../pages/login/store'
 import { Top, Logo, Menu, MenuItem, MenuSearch, SearchWrapper, SearchInfo, SearchInfoTitle, SearchInfoSwitch, SearchInfoItem, Addition, Button } from './style';
 
 class Header extends Component {
@@ -41,7 +42,7 @@ class Header extends Component {
     }
   }
   render() {
-    const { focused, handleInputFocus, handleInputBlur, list} = this.props;
+    const { focused, handleInputFocus, handleInputBlur, list, isLogin, logout} = this.props;
     return (
       <Top>
         <Link to='/'>
@@ -65,17 +66,25 @@ class Header extends Component {
             <i className={focused ? 'focused iconfont zoom' : 'iconfont zoom'}>&#xe62b;</i>
             {this.showInfo()}
           </SearchWrapper>
-          <MenuItem className="right">登入</MenuItem>
+          {
+            isLogin ? 
+            <MenuItem className="right" onClick={logout}>退出</MenuItem> : 
+            <Link to='/login'>
+              <MenuItem className="right">登录</MenuItem>
+            </Link>
+          }
           <MenuItem className="right">
             <i className="iconfont">&#xe636;</i>
           </MenuItem>
         </Menu>
         <Addition>
-          <Button className="write">
-            <i className="iconfont">&#xe96c;</i>
-            <span>&nbsp;</span>
-            写文章
-          </Button>
+          <Link to='/write'>
+            <Button className="write">
+              <i className="iconfont">&#xe96c;</i>
+              <span>&nbsp;</span>
+              写文章
+            </Button>
+          </Link>
           <Button className="register">注册</Button>
         </Addition>
       </Top>
@@ -91,7 +100,8 @@ const mapStateToprops = (state) => {
     list: state.getIn(['header', 'list']),
     page: state.getIn(['header', 'page']),
     totalPage: state.getIn(['header' , 'totalPage']),
-    mouseIn: state.getIn(['header', 'mouseIn'])
+    mouseIn: state.getIn(['header', 'mouseIn']),
+    isLogin: state.getIn(['login', 'isLogin'])
   }
 }
 // 映射dispatch方法到props上
@@ -125,6 +135,9 @@ const mapDispatchToProps = (dispatch) => {
       }else{
         dispatch(actionCreators.changePage(0));
       }    
+    },
+    logout() {
+      dispatch(loginactionCreators.logout())
     }
   }
 }

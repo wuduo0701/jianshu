@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import logopic from '../../assets/logo.png';
 
 export const Top = styled.div`
+  z-index: 1;
   position: relative;
   height: 56px;
   border-bottom:  1px solid #f0f0f0;
