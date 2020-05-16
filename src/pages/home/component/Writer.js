@@ -1,45 +1,35 @@
 import React, { PureComponent } from 'react';
-import { WriterWrapper, WriterUl, WriterItem, FindAll, WriterName, Follow} from '../style'
+import { connect } from 'react-redux';
+import { WriterWrapper, WriterUl, WriterItem, FindAll, WriterName, Follow} from '../style';
+
 class Writer extends PureComponent {
   render() {
+    const { writer } = this.props;
     return(
       <WriterWrapper>
         <WriterUl>
-          <WriterItem>
-            <img src="https://upload.jianshu.io/users/upload_avatars/3136195/484e32c3504a.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp" alt="" className="avator"/>
-            <WriterName>梅拾璎</WriterName>
-            <p className='content'>写了275.8k字 · 30.6k喜欢</p>
-            <Follow>+关注</Follow>
-          </WriterItem>
-          <WriterItem>
-            <img src="https://upload.jianshu.io/users/upload_avatars/3136195/484e32c3504a.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp" alt="" className="avator"/>
-            <WriterName>梅拾璎</WriterName>
-            <p className='content'>写了275.8k字 · 30.6k喜欢</p>
-            <Follow>+关注</Follow>
-          </WriterItem>
-          <WriterItem>
-            <img src="https://upload.jianshu.io/users/upload_avatars/3136195/484e32c3504a.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp" alt="" className="avator"/>
-            <WriterName>梅拾璎</WriterName>
-            <p className='content'>写了275.8k字 · 30.6k喜欢</p>
-            <Follow>+关注</Follow>
-          </WriterItem>
-          <WriterItem>
-            <img src="https://upload.jianshu.io/users/upload_avatars/3136195/484e32c3504a.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp" alt="" className="avator"/>
-            <WriterName>梅拾璎</WriterName>
-            <p className='content'>写了275.8k字 · 30.6k喜欢</p>
-            <Follow>+关注</Follow>
-          </WriterItem>
-          <WriterItem>
-            <img src="https://upload.jianshu.io/users/upload_avatars/3136195/484e32c3504a.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp" alt="" className="avator"/>
-            <WriterName>梅拾璎</WriterName>
-            <p className='content'>写了275.8k字 · 30.6k喜欢</p>
-            <Follow>+关注</Follow>
-          </WriterItem>
+          {
+            writer.map((item) => {
+              return (
+                <WriterItem key={item.get('id')}>
+                  <img src={item.get('imgUrl')} alt="" className="avator"/>
+                  <WriterName>{item.get('writerName')}</WriterName>
+                  <p className='content'>{item.get('content')}</p>
+                  <Follow>+关注</Follow>
+                </WriterItem>
+              )
+            })
+          }
         </WriterUl>
-        <FindAll>查看全部</FindAll>
+        <FindAll onClick={() => this.findAll()}>查看全部</FindAll>
       </WriterWrapper>
     )
   }
+  findAll(){
+    alert("功能正在完善哦😀")
+  }
 }
-
-export default Writer;
+const mapState = (state) => ({
+  writer: state.getIn(['home', 'writer']),
+})
+export default connect(mapState, null)(Writer);

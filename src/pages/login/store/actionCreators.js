@@ -15,7 +15,8 @@ export const login = (accout, password) => {
       .then((res) => {
         const result = res.data.data;
         if(result) {
-          dispatch(changeLogin(result))
+          dispatch(changeLogin(result));
+          alert('登入成功')
         }else {
           alert('登录失败')
         }

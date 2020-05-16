@@ -5,7 +5,8 @@ import { fromJS} from 'immutable';
 const changeHomeData = (result) => ({
   type: actionsTypes.CHANGE_HOME_DATA,
   articleList: result.articleList,
-  recommendList: result.recommendList
+  recommendList: result.recommendList,
+  writer: result.writer
 })
 
 const addMoreInfo = (list, nextPage) => ({

@@ -18,7 +18,7 @@
         "id": 3,
         "title": "多读点书真好",
         "desc": "我文化不高，凌晨三点到早上十点得帮现在的家批菜，总想着白天再找份兼职，自己想赚点钱帮帮女儿。 找实体店或工厂打工都顾不了早上卖菜。就想找个在家自...",
-        "img": "https://upload-images.jianshu.io/upload_images/19716661-fdb8ea0fd9d47ecf.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240"
+        "img": "https://upload-images.jianshu.io/upload_images/20293023-1d9ca8ceb6f8b634.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240"
       },
       {
         "id": 4,
@@ -67,6 +67,32 @@
       {
         "id": 4,
         "imgUrl": "https://cdn2.jianshu.io/assets/web/banner-s-6-c4d6335bfd688f2ca1115b42b04c28a7.png"
+      }
+    ],
+    "writer": [
+      {
+        "id": 1,
+        "imgUrl": "https://upload.jianshu.io/users/upload_avatars/3136195/484e32c3504a.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp",
+        "writerName": "梅拾璎",
+        "content": "写了275.8k字 · 30.6k喜欢"
+      },
+      {
+        "id": 2,
+        "imgUrl": "https://upload.jianshu.io/users/upload_avatars/9988193/fc26c109-1ae6-4327-a298-2def343e9cd8.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp",
+        "writerName": "卢璐说",
+        "content": "写了1550.7k字 · 32k喜欢"
+      },
+      {
+        "id": 3,
+        "imgUrl": "https://upload.jianshu.io/users/upload_avatars/3343569/6940ee65-036f-4b7a-9935-5915d9b67d14.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp",
+        "writerName": "吴晓布",
+        "content": "写了777.2k字 · 27.9k喜欢"
+      },
+      {
+        "id": 4,
+        "imgUrl": "https://upload.jianshu.io/users/upload_avatars/3730494/4a86a2a7-d5b9-47f1-969a-d8ef4711488b.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp",
+        "writerName": "格列柯南",
+        "content": "写了774.5k字 · 44.1k喜欢"
       }
     ]
   }

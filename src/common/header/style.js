@@ -37,6 +37,7 @@ export const MenuItem = styled.div`
   &.right {
     float: right;
     color: #969696;
+    cursor: pointer;
   }
   &.active {
     color: #ea6f5a;
@@ -157,6 +158,7 @@ export const Button = styled.div`
   font-size: 14px;
   &.register {
     color: #ec6149;
+    cursor: pointer;
   }
   &.write {
     color: #fff;

@@ -3,6 +3,7 @@ import * as actionsTypes from './actionTypes';
 const defaultState = fromJS({
   articleList:[],
   recommendList: [],
+  writer: [],
   acticlePage: 1,
   isTop: false
 })
@@ -12,7 +13,8 @@ export default(state = defaultState, action) => {
     case actionsTypes.CHANGE_HOME_DATA:
       return state.merge({
         articleList: fromJS(action.articleList),
-        recommendList: fromJS(action.recommendList)
+        recommendList: fromJS(action.recommendList),
+        writer: fromJS(action.writer)
       })
     case actionsTypes.Add_MORE_INFO:
       return state.merge({

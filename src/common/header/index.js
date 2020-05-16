@@ -42,7 +42,7 @@ class Header extends Component {
     }
   }
   render() {
-    const { focused, handleInputFocus, handleInputBlur, list, isLogin, logout} = this.props;
+    const { focused, handleInputFocus, handleInputBlur, list, isLogin, logout, register} = this.props;
     return (
       <Top>
         <Link to='/'>
@@ -87,7 +87,7 @@ class Header extends Component {
               写文章
             </Button>
           </Link>
-          <Button className="register">注册</Button>
+          <Button className="register" onClick={register}>注册</Button>
         </Addition>
       </Top>
     )
@@ -139,7 +139,11 @@ const mapDispatchToProps = (dispatch) => {
       }    
     },
     logout() {
-      dispatch(loginactionCreators.logout())
+      dispatch(loginactionCreators.logout());
+      alert('退出成功');
+    },
+    register() {
+      alert('注册页面还在努力哦')
     }
   }
 }
