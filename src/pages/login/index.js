@@ -12,8 +12,8 @@ class Login extends PureComponent {
         <LoginWrapper>
           <LoginBox>
             <Title>登入界面</Title>
-            <Input placeholder='账号' ref={(input) => {this.account = input}}/>
-            <Input placeholder='密码' type='password' ref={(input) => {this.password = input}}/>
+            <Input placeholder='账号：root' ref={(input) => {this.account = input}}/>
+            <Input placeholder='密码：12345' type='password' ref={(input) => {this.password = input}}/>
             <Button onClick={() => this.props.login(this.account, this.password)}>登录</Button>
           </LoginBox>
         </LoginWrapper>

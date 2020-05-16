@@ -33,6 +33,7 @@ export const MenuItem = styled.div`
   color: #333333;
   &.left {
     float: left;
+    cursor: pointer;
   }
   &.right {
     float: right;

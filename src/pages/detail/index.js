@@ -5,13 +5,11 @@ import { actionCreators } from './store/index';
 
 class Detail extends PureComponent {
   render() {
+    const { title, content } = this.props;
     return (
       <DetailWrapper>
-        <Title>
-          {this.props.title}
-        </Title>
-        <Content dangerouslySetInnerHTML={{__html: this.props.content}}>
-        </Content>
+        <Title dangerouslySetInnerHTML={{__html: title}} />
+        <Content dangerouslySetInnerHTML={{__html: content}} />
       </DetailWrapper>
     )
   }

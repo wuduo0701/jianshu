@@ -42,7 +42,7 @@ class Header extends Component {
     }
   }
   render() {
-    const { focused, handleInputFocus, handleInputBlur, list, isLogin, logout, register} = this.props;
+    const { focused, handleInputFocus, handleInputBlur, list, isLogin, logout, register, downLoad} = this.props;
     return (
       <Top>
         <Link to='/'>
@@ -52,7 +52,7 @@ class Header extends Component {
           <Link to='/'>
             <MenuItem className="left active">首页</MenuItem>
           </Link>
-          <MenuItem className="left">下载App</MenuItem>
+          <MenuItem className="left" onClick={downLoad}>下载App</MenuItem>
           <SearchWrapper>
             <CSSTransition
               in={focused}
@@ -140,10 +140,13 @@ const mapDispatchToProps = (dispatch) => {
     },
     logout() {
       dispatch(loginactionCreators.logout());
-      alert('退出成功');
+      alert('退出成功啦😝');
     },
     register() {
-      alert('注册页面还在努力哦')
+      alert('注册页面还在努力哦😇');
+    },
+    downLoad(){
+      alert('暂不支持下载哦⛳');
     }
   }
 }

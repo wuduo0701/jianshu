@@ -6,6 +6,7 @@ class Write extends PureComponent {
   render() {
     const { isLogin } = this.props;
     if(!isLogin) {
+      alert('你还没登录哦😡')
       return <Redirect to='/login'/>
     }else{
       return(
